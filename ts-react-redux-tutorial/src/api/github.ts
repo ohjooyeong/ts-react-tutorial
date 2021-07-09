@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export async function getUserProfile(username: string) {
+  // Generic 을 통해 응답 데이터의 타입을 설정 할 수 있습니다.
   const response = await axios.get<GithubProfile>(
     `https://api.github.com/users/${username}`,
   );
